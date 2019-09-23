@@ -116,8 +116,8 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">接口自动化测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> 李晓良</p>
-<p class='attribute'><strong>开始时间 : </strong> 2019-09-23 16:31:56</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:12.087175</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-09-23 19:18:15</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:09.688843</p>
 <p class='attribute'><strong>测试结果 : </strong> 共 18，通过 18，通过率= 100.00%</p>
 
 <p class='description'></p>
@@ -173,15 +173,15 @@ url:https://q.test.dos.cheanjia.net/api/v1/used_car/tickets
 post请求结果为：{
   "code": 0,
   "data": {
-    "id": 6056,
+    "id": 6064,
     "plate_number_exist_data": false,
     "reference_price": 5280000
   },
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
-存储car_id为6056
+存储car_id为6064
+2019-09-23 19:18:16,191-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -201,17 +201,17 @@ code:0 message:ok
     <pre>
     
 pt1_2: 用例名称：获取car_info_id
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/6056/evaluation/car_info
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/6064/evaluation/car_info
 post请求结果为：{
   "code": 0,
   "data": {
-    "car_info_id": 22872
+    "car_info_id": 22891
   },
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
-存储car_info_id为22872
+存储car_info_id为22891
+2019-09-23 19:18:16,594-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -231,7 +231,7 @@ code:0 message:ok
     <pre>
     
 pt1_3: 用例名称：评估线索-评估车辆信息-基本信息
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22872
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22891
 post请求结果为：{
   "code": 0,
   "data": {
@@ -240,8 +240,8 @@ post请求结果为：{
   },
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:17,036-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -261,7 +261,7 @@ code:0 message:ok
     <pre>
     
 pt1_4: 用例名称：评估线索-评估车辆信息-配置信息手续信息
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22872/info
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22891/info
 post请求结果为：{
   "code": 0,
   "data": {
@@ -270,8 +270,8 @@ post请求结果为：{
   },
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:17,517-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -291,7 +291,7 @@ code:0 message:ok
     <pre>
     
 pt1_5: 用例名称：评估线索-评估车辆信息-上传照片
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22872/images
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22891/images
 post请求结果为：{
   "code": 0,
   "data": {
@@ -299,8 +299,8 @@ post请求结果为：{
   },
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:17,944-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -320,7 +320,7 @@ code:0 message:ok
     <pre>
     
 pt1_6: 用例名称：评估线索-评估检测信息-车头
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22872/inspection
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22891/inspection
 post请求结果为：{
   "code": 0,
   "data": {
@@ -726,8 +726,8 @@ post请求结果为：{
   },
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:18,413-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -747,7 +747,7 @@ code:0 message:ok
     <pre>
     
 pt1_7: 用例名称：评估线索-评估检测信息-左侧
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22872/inspection
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22891/inspection
 post请求结果为：{
   "code": 0,
   "data": {
@@ -1527,8 +1527,8 @@ post请求结果为：{
   },
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:18,999-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -1548,7 +1548,7 @@ code:0 message:ok
     <pre>
     
 pt1_8: 用例名称：评估线索-评估检测信息-车尾
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22872/inspection
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22891/inspection
 post请求结果为：{
   "code": 0,
   "data": {
@@ -2646,8 +2646,8 @@ post请求结果为：{
   },
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:19,586-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -2667,7 +2667,7 @@ code:0 message:ok
     <pre>
     
 pt1_9: 用例名称：评估线索-评估检测信息-右侧
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22872/inspection
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22891/inspection
 post请求结果为：{
   "code": 0,
   "data": {
@@ -4139,8 +4139,8 @@ post请求结果为：{
   },
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:20,302-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -4160,7 +4160,7 @@ code:0 message:ok
     <pre>
     
 pt1_10: 用例名称：评估线索-评估检测信息-机械内饰
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22872/inspection
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22891/inspection
 post请求结果为：{
   "code": 0,
   "data": {
@@ -6239,8 +6239,8 @@ post请求结果为：{
   },
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:21,249-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -6260,7 +6260,7 @@ code:0 message:ok
     <pre>
     
 pt1_11: 用例名称：评估线索-评估检测信息-电机
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22872/inspection
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22891/inspection
 post请求结果为：{
   "code": 0,
   "data": {
@@ -8525,8 +8525,8 @@ post请求结果为：{
   },
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:22,098-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -8546,7 +8546,7 @@ code:0 message:ok
     <pre>
     
 pt1_12: 用例名称：评估线索-评估简述
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22872/qymp_remark
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22891/qymp_remark
 post请求结果为：{
   "code": 0,
   "data": {
@@ -8555,8 +8555,8 @@ post请求结果为：{
   },
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:22,526-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -8576,16 +8576,16 @@ code:0 message:ok
     <pre>
     
 pt1_13: 用例名称：评估线索-生成评估报告
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22872/status
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/car_info/22891/status
 post请求结果为：{
   "code": 0,
   "data": {
-    "ticket_id": 6056
+    "ticket_id": 6064
   },
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:22,950-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -8605,13 +8605,13 @@ code:0 message:ok
     <pre>
     
 pt1_14: 用例名称：估价
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/6056/appraise
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/6064/appraise
 post请求结果为：{
   "code": 0,
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:23,362-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -8631,13 +8631,13 @@ code:0 message:ok
     <pre>
     
 pt1_15: 用例名称：签合同
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/6056/contract
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/6064/contract
 post请求结果为：{
   "code": 0,
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:23,809-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -8657,13 +8657,13 @@ code:0 message:ok
     <pre>
     
 pt1_16: 用例名称：财务审核-通过
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/6056/finance/review
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/6064/finance/review
 post请求结果为：{
   "code": 0,
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:24,225-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -8683,13 +8683,13 @@ code:0 message:ok
     <pre>
     
 pt1_17: 用例名称：店总审核-通过
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/6056/manager/review
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/6064/manager/review
 post请求结果为：{
   "code": 0,
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:24,759-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>
@@ -8709,13 +8709,13 @@ code:0 message:ok
     <pre>
     
 pt1_18: 用例名称：财务放款
-url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/6056/finish
+url:https://q.test.dos.cheanjia.net/api/v1/used_car/ticket/6064/finish
 post请求结果为：{
   "code": 0,
   "message": "ok"
 }
-&lt;Response [200]&gt;
 code:0 message:ok
+2019-09-23 19:18:25,222-ERROR-my_log.py-test_logs-日志信息:获取到的结果是：&lt;Response [200]&gt;
 
 
     </pre>

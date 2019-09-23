@@ -2,7 +2,6 @@ import unittest
 from tools.http_requests import HttpResuest
 from tools.do_excel import DoExcle
 from tools.get_path import *
-from tools.do_mysql import DoMysql
 from tools.login_getCookies import login
 from tools.get_data import GetData
 from tools.my_log import MyLog
