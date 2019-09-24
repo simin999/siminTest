@@ -69,7 +69,7 @@ class TestCase(unittest.TestCase):
             '''结果写回excel'''
             DoExcle(test_data_path).write_back(item['sheetname'],int(item['case_id'])+1,8,str(r))
             DoExcle(test_data_path).write_back(item['sheetname'],int(item['case_id'])+1,9,test_result)
-            MyLog().error("获取到的结果是：{0}".format(res))
+            # MyLog().error("获取到的结果是：{0}".format(res))
 
 
 
