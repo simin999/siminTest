@@ -33,16 +33,22 @@ class TestCase(unittest.TestCase):
             item['data'] = item['data'].replace('${car_num}', str(getattr(GetData, 'car_num')))
         else:
             pass
-        #对参数中的的嵌套字典进行处理
         d = eval(item["data"])
-        if "inspection" in d.keys():
-            d["inspection"] = json.dumps(d["inspection"])
-        elif "info" in d.keys():
-            d["info"] = json.dumps(d["info"])
         print("url:{}".format(item['url']))
-        MyLog().info("请求的参数是：{0}".format(d))
-        res = HttpResuest.http_request(url=item['url'], data=d, method=item['method'], headers=headers,
+        # MyLog().info("请求的参数是：{0}".format(d))
+
+        #如果参数类型是json，要在header里加上“Content-Type：application/json”，并且要对data进行处理
+        if item['contentType']=='json':
+            headers["Content-Type"] = "application/json"
+            d=json.dumps(eval(item["data"]))
+            res = HttpResuest.http_request(url=item['url'], data=d, method=item['method'], headers=headers,
                                        cookies=cookies)
+            #请求结束后删除headers里面的Content-Type,因为后续接口的传参格式不一定是json
+            del headers["Content-Type"]
+
+        else:
+            res = HttpResuest.http_request(url=item['url'], data=d, method=item['method'], headers=headers,
+                                           cookies=cookies)
         r = json.loads(res.text)  # 将response格式转化为python字典格式
         print("code:{}".format(r["code"]),     "message:{}".format(r["message"]))
         if item['title']=='新建线索':
@@ -67,8 +73,9 @@ class TestCase(unittest.TestCase):
             raise
         finally:
             '''结果写回excel'''
-            DoExcle(test_data_path).write_back(item['sheetname'],int(item['case_id'])+1,8,str(r))
-            DoExcle(test_data_path).write_back(item['sheetname'],int(item['case_id'])+1,9,test_result)
+            pass
+            DoExcle(test_data_path).write_back(item['sheetname'],int(item['case_id'])+1,9,str(r))
+            DoExcle(test_data_path).write_back(item['sheetname'],int(item['case_id'])+1,10,test_result)
             # MyLog().error("获取到的结果是：{0}".format(res))
 
 

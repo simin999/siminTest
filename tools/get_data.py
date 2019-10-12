@@ -1,7 +1,4 @@
-from tools.get_path import *
-from openpyxl import load_workbook
 from tools.random_str import *
-sheet=load_workbook(test_data_path)['init']
 class GetData():
     car_info_id=None
     car_id=None
