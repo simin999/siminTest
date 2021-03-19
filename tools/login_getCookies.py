@@ -10,12 +10,12 @@ def login():
    header = {"Content-Type": "application/json; charset=UTF-8"}
    try:
       res1=requests.post(
-         url='https://q.test.dos.cheanjia.net/auth/wxlogin',
+         url='https://q.test.dos.lixinchuxing.cn/auth/wxlogin',
          data=data,headers=header,verify=False)
    except Exception as e:
       print("登录异常".format(e))
    cookies["session"] = res1.cookies["session"]
-   res2=requests.get(url='https://q.test.dos.cheanjia.net/auth/is_qymplogin',cookies=cookies, verify=False)
+   res2=requests.get(url='https://q.test.dos.lixinchuxing.cn/auth/is_qymplogin',cookies=cookies, verify=False)
    cookies["csrf-token"] = res2.cookies["csrf-token"]
    headers["X-CSRF-Token"]=res2.cookies["csrf-token"]
    # headers["Content-Type"]="application/json"

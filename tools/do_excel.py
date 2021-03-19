@@ -48,7 +48,7 @@ class DoExcle:
                     for j in range(1,sheet.max_column-2):
                         row_data[self.get_headers(sheetname)[j-1]] = sheet.cell(case_id+1, j).value
                     row_data['sheetname'] = key
-                    # 将已经产生确定值的变量批量替换，需要执行用例才产生确定值的变量不能替换
+                    # 将已经产生确定值的变量批量替换（提前准备的测试数据做变量替换），需要执行用例后才产生确定值的变量（由测试数据执行后才生成的）不能替换
                     row_data=DoRegx.do_regx('\$\{(.*?)\}',str(row_data))
                     sheet_data.append(eval(row_data))
             data+=sheet_data
@@ -64,5 +64,5 @@ class DoExcle:
 if __name__ == '__main__':
     headers=data=DoExcle(test_data_path).get_headers("usedCar_collection")
     data=DoExcle(test_data_path).get_data()
-    print(data)
+    print(type(data))
     print(cf)

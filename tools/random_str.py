@@ -34,6 +34,14 @@ def random_mobile():
     num2=''.join(random.choice('0123456789') for i in range(8))
     mobile=num1+num2
     return mobile
+def aaa():
+	one_str=string.ascii_uppercase + string.digits
+	for i in range(20):
+		one_list=[random.choice(one_str) for i in range(5)]
+		one_str_tmp=''.join(one_list)
+		print(one_str_tmp)
 
 if __name__ == '__main__':
-    print(random_vin())
+    # print(random_vin())
+	# print(random_str(8))
+	aaa()

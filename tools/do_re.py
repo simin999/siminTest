@@ -18,5 +18,4 @@ if __name__ == '__main__':
  'method': 'post', 'query': None, 'excepted': 0, 'sheetname': 'usedCar'})
     re=DoRegx.do_regx('\$\{(.*?)\}',data)
     print(re)
-    print(type(re))
 
